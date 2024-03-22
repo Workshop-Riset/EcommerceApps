@@ -1,0 +1,24 @@
+<!-- catalogProduct.ejs -->
+<%- include('../partials/_head.ejs', {title:'Catalog Product'}) %>
+<body>
+    <%- include('../partials/_nav.ejs', {role:role, userId:userId}) %>
+    <section id="mainContainer">
+        <% products.forEach(product => { %>
+            <div class="product-card">
+                <img src="<%= product.imgSrc %>" alt="<%= product.name %>">
+                <div class="product-details">
+                    <h3><%= product.name %></h3>
+                    <p><%= product.description %></p>
+                    <p>Brand: <%= product.brand %></p>
+                    <p>Price: <%= product.price %></p>
+                    <p>Category: <%= product.Category.name %></p>
+                    <form action="/shop/addToCart/<%= product.id %>" method="POST">
+                        <button type="submit">Tambah</button>
+                    </form>
+                </div>
+            </div>
+        <% }) %>
+    </section>
+    <% include('../partials/_footer.ejs') %>
+</body>
+</html>

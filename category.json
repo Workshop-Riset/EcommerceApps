@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Sepatu Olahraga",
+      "description": "Sepatu yang dirancang khusus untuk berbagai jenis olahraga seperti lari, basket, tenis, dan lain-lain.",
+      "createdAt": "2024-03-21T12:00:00",
+      "updatedAt": "2024-03-21T12:00:00"
+    },
+    {
+      "name": "Sepatu Formal",
+      "description": "Sepatu yang biasanya dipakai untuk acara-acara formal seperti pesta, pernikahan, atau acara bisnis.",
+      "createdAt": "2024-03-21T12:00:00",
+      "updatedAt": "2024-03-21T12:00:00"
+    },
+    {
+      "name": "Sepatu Kasual",
+      "description": "Sepatu yang nyaman dan cocok untuk penggunaan sehari-hari atau untuk suasana santai.",
+      "createdAt": "2024-03-21T12:00:00",
+      "updatedAt": "2024-03-21T12:00:00"
+    },
+    {
+      "name": "Sepatu Trekking",
+      "description": "Sepatu yang dirancang khusus untuk kegiatan hiking, trekking, atau aktivitas luar ruangan lainnya.",
+      "createdAt": "2024-03-21T12:00:00",
+      "updatedAt": "2024-03-21T12:00:00"
+    },
+    {
+      "name": "Sepatu Sandal",
+      "description": "Sepatu terbuka yang cocok untuk cuaca hangat atau digunakan di tempat-tempat santai.",
+      "createdAt": "2024-03-21T12:00:00",
+      "updatedAt": "2024-03-21T12:00:00"
+    }
+  ]
+  

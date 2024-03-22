@@ -1,0 +1,18 @@
+<%- include('../partials/_head.ejs', {title:'Toko Sepatu'}) %>
+
+<body>
+      <%- include('../partials/_nav.ejs', {role:role, userId:userId}) %>
+      <section class="landing-content">
+            <div class="landing-text">
+                <h1>Welcome to Our E-Commerce Wonderland!</h1>
+                <p>Discover a world of amazing products and unbeatable deals.</p>
+                <a href="/shop" class="btn btn-primary">Shop Now</a>
+            </div>
+            <div class="landing-image">
+                <img src="/img/imgHome.jpg" alt="Landing Image">
+            </div>
+        </section>
+      <%- include('../partials/_footer.ejs') %>
+</body>
+
+</html>

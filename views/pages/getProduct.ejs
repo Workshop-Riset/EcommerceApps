@@ -1,0 +1,68 @@
+<%- include('../partials/_head.ejs', {title:'Product List'}) %>
+<body>
+    <%- include('../partials/_nav.ejs', {role:'Admin', userId:userId}) %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section>
+        <div class="container">
+            <% if (message) { %>
+                <div class="notification">
+                    <%= message %>
+                </div>
+            <% } %>
+            <div class="add-product-button">
+                <a href="/product/add">
+                    <button type="button">Tambah Produk</button>
+                </a>
+            </div>
+            <h2 class="section-title">Daftar Produk Sepatu</h2>
+            <div class="table-container">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                            <th>Kategori</th>
+                            <th>Image Src</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% product.forEach(product => { %>
+                            <tr>
+                                <td><%= product.id %></td>
+                                <td><%= product.name %></td>
+                                <td><%= formatRp(product.formattedPrice()) %></td>
+                                <td><%= product.stock %></td>
+                                <td><%= product.Category.name %></td>
+                                <td><%= product.imgSrc %></td>
+                                <td>
+                                    <a href="/product/addStock/<%= product.id %>">
+                                        <button type="submit">Tambah Stok</button>
+                                    </a>
+                                    <a href="/product/delete/<%= product.id %>">
+                                        <button type="submit">Hapus</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%- include('../partials/_footer.ejs') %>
+</body>
+</html>

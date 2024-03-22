@@ -1,0 +1,39 @@
+<header>
+   <section>
+       <!-- MAIN CONTAINER -->
+        <% if (role === 'Admin') { %>
+            <div id="container">
+                <!-- SHOP NAME -->
+                <div id="shopName"><a href="/home"> <b>TOKO</b>SEPATU</a></div>
+                    <!-- COLLCETIONS ON WEBSITE -->
+                    <div id="collection">
+                        <div id="clothing"><a href="/product"> Product List </a></div>
+                        <div id="clothing"><a href="/category"> Category </a></div>
+                    </div>
+                    <!-- USER SECTION (CART AND USER ICON) -->
+                    <div id="user">
+                        <a href="/profile/<%= userId %>"> <i class="fas fa-user-circle userIcon"></i> </a>
+                        <a href="/logout">LOGOUT</a>
+                    </div>
+            </div>
+        <% }else { %>
+            <div id="container">
+                <!-- SHOP NAME -->
+                <div id="shopName"><a href="index.html"> <b>TOKO</b>SEPATU</a></div>
+                    <!-- COLLCETIONS ON WEBSITE -->
+                    <!-- <div id="collection">
+                        <div id="clothing"><a href="/shop"> SHOP </a></div>
+                    </div> -->
+                    <!-- USER SECTION (CART AND USER ICON) -->
+                    <div id="user">
+                        <a href="/shop/cart/<%= userId %>"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> </div></i></a>
+                        <a href="/profile/<%= userId %>"> <i class="fas fa-user-circle userIcon"></i> </a>
+                        <a href="/logout">LOGOUT</a>
+                    </div>
+            </div>
+        <% } %>
+
+       
+
+   </section>
+</header>

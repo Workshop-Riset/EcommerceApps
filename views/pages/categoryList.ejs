@@ -1,0 +1,46 @@
+<%- include('../partials/_head.ejs', {title:'Category List'}) %>
+<body>
+    <%- include('../partials/_nav.ejs', {role:role,userId:userId}) %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section>
+        <div class="container">
+            <h2 class="section-title">Daftar Kategori Produk</h2>
+            <form action="/category/" method="get">
+                <input type="text" name="search" placeholder="Cari Nama Product gan">
+                <input type="submit" value="sumbit">
+            </form>
+            <div class="table-container">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% categories.forEach(category => { %>
+                            <tr>
+                                <td><%= category.id %></td>
+                                <td><%= category.name %></td>
+                                <td><%= category.description %></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%- include('../partials/_footer.ejs') %>
+</body>
+</html>

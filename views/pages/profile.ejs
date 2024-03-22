@@ -1,0 +1,54 @@
+<%- include('../partials/_head.ejs', {title:'Profile'}) %>
+
+<body>
+    <%- include('../partials/_nav.ejs', {role:role,userId : userId}) %>
+    <section class="container">
+        <h2>User Profile</h2>
+        <form>
+            <a href="/profile/editProfile/<%= userId %>">
+                <button class="edit-button" type="button">Edit</button>
+            </a>
+            <div>
+                <label for="fullName">Full Name:</label>
+                <% if (user.Profile && user.Profile.fullName) { %>
+                    <input type="text" id="fullName" name="fullName" value="<%= user.Profile.fullName %>" readonly>
+                <% } else { %>
+                    <input type="text" id="fullName" name="fullName" value="fullName" readonly>
+                <% } %>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <% if (user.Profile && user.Profile.address) { %>
+                    <textarea id="address" name="address" readonly><%= user.Profile.address %></textarea>
+                <% } else { %>
+                    <textarea id="address" name="address" readonly>Address</textarea>
+                <% } %>
+            </div>
+            <div>
+                <label for="phoneNumber">Phone Number:</label>
+                <% if (user.Profile && user.Profile.phoneNumber) { %>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" value="<%= user.Profile.phoneNumber %>" readonly>
+                <% } else { %>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" value="+62" readonly>
+                <% } %>
+            </div>
+        </form>
+        <br>
+        <br>
+        <form>
+            <a href="/profile/editUser/<%= userId %>">
+                <button class="edit-button" type="button">Edit</button>
+            </a>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= user.email %>" readonly>
+            </div>
+            <div>
+                <label for="role">Role:</label>
+                <input type="text" id="role" name="role" value="<%= user.role %>" readonly>
+            </div>
+        </form>
+    </section>
+    <%- include('../partials/_footer.ejs') %>
+</body>
+</html>
